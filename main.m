@@ -147,6 +147,11 @@ data = {
     ["x",x];
     ["y",y];
 };
+xlabel("A成分液相mole分率")
+ylabel("A成分氣相mole分率")
+
+ll = legend("","氣液平衡線","進料操作線","精餾段操作線-最小回流比","精餾段操作線","氣提段操作線");
+ll.Position = [0.63,0.46,0.24,0.095];
 saveas(fig,"./output/design.png","png")
 writecell(data,"./output/data.xlsx","Sheet","data")
 
